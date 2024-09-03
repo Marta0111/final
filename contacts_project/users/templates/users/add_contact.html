@@ -1,0 +1,55 @@
+<!-- users/templates/users/add_contact.html -->
+{% load static %}
+
+
+<!-- contacts/add_contact.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Add Contact</h1>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            <p>
+                <label for="id_name">Name:</label>
+                {{ form.name }}
+            </p>
+            <p>
+                <label for="id_phone">Phone:</label>
+                {{ form.phone }}
+            </p>
+            <p>
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+            </p>
+            <p>
+                <label for="id_address">Address:</label>
+                {{ form.address }}
+            </p>
+            <p>
+                <label for="id_company">Company:</label>
+                {{ form.company }}
+            </p>
+            <p>
+                <label for="id_note">Note:</label>
+                {{ form.note }}
+            </p>
+            <button type="submit">Save</button>
+        </form>
+    </main>
+    <footer>
+        <a href="{% url 'home' %}" class="home-button">Hlavní stránka</a>
+        <p>© 2024 Martina Frantová</p>
+    </footer>
+</body>
+</html>
+

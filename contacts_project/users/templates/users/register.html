@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+        <p>Už máte účet? <a href="{% url 'login' %}">Přihlásit zde</a></p>
+    </main>
+    <footer>
+        <a href="{% url 'home' %}" class="home-button">Hlavní stránka</a>
+        <p>© 2024 Martina Frantová</p>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Delete</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Confirm Delete</h1>
+    </header>
+    <main>
+        <p>Are you sure you want to delete "{{ object.name }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Confirm</button>
+        </form>
+        <a href="{% url 'contact-list' %}">Cancel</a>
+    </main>
+    <footer>
+        <a href="{% url 'home' %}" class="home-button">Hlavní stránka</a>
+        <p>© 2024 Martina Frantová</p>
+
+    </footer>
+</body>
+</html>

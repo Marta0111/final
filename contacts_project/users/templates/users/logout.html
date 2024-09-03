@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odhlášení</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Odhlášení</h1>
+    </header>
+    <main>
+        <p>Byli jste úspěšně odhlášeni.</p>
+
+    </main>
+    <footer>
+        <a href="{% url 'home' %}">Hlavní stránka</a>
+        <a href="{% url 'login' %}">Přihlásit se</a>
+        <p>© 2024 Martina Frantová</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+<!-- users/templates/users/confirm_delete.html -->
+
+{% extends 'users/base.html' %}
+
+{% block title %}Delete Contact{% endblock %}
+
+{% block content %}
+    <h1>Are you sure you want to delete "{{ object.name }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+        <a href="{% url 'users:contacts' %}">Cancel</a>
+    </form>
+{% endblock %}

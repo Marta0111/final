@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Edit Contact</h1>
+    </header>
+    <main>
+        <form method="post" action="{% url 'edit-contact' form.instance.pk %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </main>
+    <footer>
+        <a href="{% url 'home' %}" class="home-button">Hlavní stránka</a>
+        <p>© 2024 Martina Frantová</p>
+    </footer>
+</body>
+</html>

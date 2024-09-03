@@ -1,0 +1,30 @@
+<!-- contacts/contact_detail.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ object.name }} - Contact Details</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ object.name }}'s Details</h1>
+    </header>
+    <main>
+        <p><strong>Name:</strong> {{ object.name }}</p>
+        <p><strong>Email:</strong> {{ object.email }}</p>
+        <p><strong>Phone:</strong> {{ object.phone }}</p>
+        <p><strong>Address:</strong> {{ object.address }}</p>
+        <p><strong>Company:</strong> {{ object.company }}</p>
+        <p><strong>Note:</strong> {{ object.note }}</p>
+        <!-- Přidáme další detaily kontaktu dle potřeby -->
+    </main>
+    <footer>
+        <a href="{% url 'home' %}" class="home-button">Hlavní stránka</a>
+        <p>© 2024 Martina Frantová</p>
+    </footer>
+</body>
+</html>

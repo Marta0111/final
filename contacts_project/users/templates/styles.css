@@ -1,0 +1,19 @@
+/* static/css/styles.css */
+
+.home-button {
+    background-color: #4CAF50; /* Zelené pozadí */
+    color: white; /* Bílý text */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.home-button:hover {
+    background-color: #45a049; /* Tmavší zelená při přejetí myší */
+}
